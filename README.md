@@ -61,6 +61,12 @@ python scripts/today_weather.py --lat 37.4979 --lon 127.0276 --day dayafter
 
 날씨는 기상청 단기예보·초단기실황을 [NomaDamas/k-skill](https://github.com/NomaDamas/k-skill)의 공용 중계 서버(`k-skill-proxy.nomadamas.org`)를 통해 받아요. 이 서버가 멈추면 날씨 조회가 실패하고, 스킬은 수치를 지어내지 않고 그 사실을 알려요. 직접 운영하는 중계 서버가 있으면 `KSKILL_PROXY_BASE_URL` 환경변수로 바꿀 수 있어요.
 
+## 개인정보 안내
+
+- 날씨를 조회할 때 **지역의 위도·경도**가 위 공용 중계 서버로 전송돼요. 그 밖의 정보(이름, 나이대, 체형, 대화 내용)는 보내지 않아요.
+- 스크립트는 날씨 조회만 하고, 내 PC의 파일을 읽거나 다른 곳으로 보내지 않아요.
+- 동네가 드러나는 게 싫으면 구·동 대신 시 단위(`--city 서울`)로 물어보세요.
+
 ## 라이선스
 
 MIT
